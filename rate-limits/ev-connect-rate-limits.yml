@@ -1,0 +1,53 @@
+specification: API Commons Rate Limits
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/RateLimits
+provider: EV Connect
+providerId: ev-connect
+created: '2026-06-21'
+modified: '2026-06-21'
+reconciled: false
+tags:
+- EV Charging
+- Charge Point Management
+- CPMS
+- Mobility
+- Energy
+- Rate Limiting
+- Quotas
+- Throttling
+description: >-
+  EV Connect exposes its APIs through an API Gateway with "service plans,"
+  which implies request quotas and throttling are applied per plan. However,
+  no specific rate-limit values (RPM/RPD or daily quotas), throttling response
+  codes, or backoff guidance are publicly documented. All values below are
+  unreconciled placeholders pending partner/API Gateway documentation.
+notes: >-
+  Rate limits and quotas are governed by the API Gateway service plan
+  associated with a partner agreement and are not published. Reconcile from the
+  EV Connect API Gateway developer portal once access is granted.
+sources:
+- https://www.evconnect.com/platform/
+- https://www.evconnect.ca/api-platform
+responseCodes:
+  throttled: see provider documentation
+limits:
+- name: API Gateway Service Plan Quota
+  scope: account
+  metric: requests
+  limit: see provider documentation
+  notes: >-
+    EV Connect markets API Gateway service plans; specific request quotas and
+    throttling thresholds are not publicly documented.
+policies:
+- name: Service Plan Tiers
+  description: >-
+    Access is mediated by API Gateway service plans; quotas are expected to
+    vary by plan but are not published.
+- name: Backoff Strategy
+  description: >-
+    No backoff guidance is published. Clients should generally implement
+    exponential backoff with jitter and honor any Retry-After header returned
+    by the gateway.
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

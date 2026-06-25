@@ -1,0 +1,165 @@
+aid: ev-connect
+url: https://raw.githubusercontent.com/api-evangelist/ev-connect/refs/heads/main/apis.yml
+name: EV Connect
+kind: company
+description: EV Connect is an EV charging network and charge-station management platform
+  (a CPMS / charge point management system) now part of Schneider Electric. Its API
+  Platform exposes open, standards-based APIs through an API Gateway so operators can
+  white-label driver apps and integrate charging into commerce, loyalty, fleet, and
+  energy systems, backed by OCPP station certification and OCPI roaming. Developer
+  documentation and credentials are partner/sales-gated; no public base URL, endpoints,
+  or authentication details are published.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- EV Charging
+- Charge Point Management
+- CPMS
+- Mobility
+- Energy
+- OCPP
+- OCPI
+created: '2026-06-21'
+modified: '2026-06-21'
+specificationVersion: '0.19'
+apis:
+- aid: ev-connect:stations-charge-points
+  name: EV Connect Stations / Charge Points API
+  tags:
+  - Stations
+  - Charge Points
+  - EVSE
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://www.evconnect.com/platform/
+  properties:
+  - url: https://www.evconnect.com/platform/
+    type: Documentation
+  - url: openapi/ev-connect-openapi.yml
+    type: OpenAPI
+  - url: collections/ev-connect.postman_collection.json
+    type: PostmanCollection
+  - url: collections/ev-connect.opencollection.json
+    type: OpenCollection
+  description: Manage charging stations and charge points (EVSE) - registration, status,
+    health, and availability - within the EV Connect charge point management platform.
+    Endpoints and base URL are not publicly documented; access is partner/sales-gated
+    via the EV Connect API Gateway.
+- aid: ev-connect:sessions
+  name: EV Connect Sessions API
+  tags:
+  - Sessions
+  - Charging
+  - Transactions
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://www.evconnect.com/platform/
+  properties:
+  - url: https://www.evconnect.com/platform/
+    type: Documentation
+  - url: openapi/ev-connect-openapi.yml
+    type: OpenAPI
+  - url: collections/ev-connect.postman_collection.json
+    type: PostmanCollection
+  - url: collections/ev-connect.opencollection.json
+    type: OpenCollection
+  description: Start, stop, and retrieve charging sessions and transaction records,
+    including energy delivered and usage tracked in real time. Endpoints and base URL
+    are not publicly documented; access is partner/sales-gated via the EV Connect API
+    Gateway.
+- aid: ev-connect:connectors
+  name: EV Connect Connectors API
+  tags:
+  - Connectors
+  - EVSE
+  - Availability
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://www.evconnect.com/platform/
+  properties:
+  - url: https://www.evconnect.com/platform/
+    type: Documentation
+  - url: openapi/ev-connect-openapi.yml
+    type: OpenAPI
+  - url: collections/ev-connect.postman_collection.json
+    type: PostmanCollection
+  - url: collections/ev-connect.opencollection.json
+    type: OpenCollection
+  description: Inspect connectors on a charge point - type, power level, and live
+    availability/status. Endpoints and base URL are not publicly documented; access
+    is partner/sales-gated via the EV Connect API Gateway.
+- aid: ev-connect:drivers
+  name: EV Connect Drivers API
+  tags:
+  - Drivers
+  - Accounts
+  - Loyalty
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://www.evconnect.com/platform/
+  properties:
+  - url: https://www.evconnect.com/platform/
+    type: Documentation
+  - url: openapi/ev-connect-openapi.yml
+    type: OpenAPI
+  - url: collections/ev-connect.postman_collection.json
+    type: PostmanCollection
+  - url: collections/ev-connect.opencollection.json
+    type: OpenCollection
+  description: Manage drivers and their charging accounts, enabling custom driver apps,
+    coupons pushed at plug-in, and loyalty-program tie-ins. Endpoints and base URL are
+    not publicly documented; access is partner/sales-gated via the EV Connect API
+    Gateway.
+- aid: ev-connect:pricing-plans
+  name: EV Connect Pricing / Plans API
+  tags:
+  - Pricing
+  - Plans
+  - Payments
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://www.evconnect.com/platform/
+  properties:
+  - url: https://www.evconnect.com/platform/
+    type: Documentation
+  - url: openapi/ev-connect-openapi.yml
+    type: OpenAPI
+  - url: collections/ev-connect.postman_collection.json
+    type: PostmanCollection
+  - url: collections/ev-connect.opencollection.json
+    type: OpenCollection
+  description: Configure charging pricing, tariffs, and payment handling that govern
+    how sessions are billed across a network. Endpoints and base URL are not publicly
+    documented; access is partner/sales-gated via the EV Connect API Gateway.
+- aid: ev-connect:webhooks
+  name: EV Connect Webhooks
+  tags:
+  - Webhooks
+  - Events
+  - Notifications
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://www.evconnect.com/platform/
+  properties:
+  - url: https://www.evconnect.com/platform/
+    type: Documentation
+  - url: openapi/ev-connect-openapi.yml
+    type: OpenAPI
+  - url: collections/ev-connect.postman_collection.json
+    type: PostmanCollection
+  - url: collections/ev-connect.opencollection.json
+    type: OpenCollection
+  description: Event notifications for charging lifecycle changes (e.g., session start,
+    stop, and station status). EV Connect markets event-driven integrations, but no
+    public webhook event catalog or payloads are documented; access is partner/sales-gated.
+common:
+- type: GitHubOrganization
+  url: https://github.com/evconnect
+- type: LinkedIn
+  url: https://www.linkedin.com/company/ev-connect
+- type: Website
+  url: https://www.evconnect.com
+- type: Documentation
+  url: https://www.evconnect.com/platform/
+- type: Plans
+  url: plans/ev-connect-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/ev-connect-rate-limits.yml
+- type: FinOps
+  url: finops/ev-connect-finops.yml
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

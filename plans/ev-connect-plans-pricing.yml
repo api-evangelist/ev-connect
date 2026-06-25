@@ -1,0 +1,57 @@
+specification: API Commons Plans
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
+provider: EV Connect
+providerId: ev-connect
+created: '2026-06-21'
+modified: '2026-06-21'
+reconciled: false
+tags:
+- EV Charging
+- Charge Point Management
+- CPMS
+- Mobility
+- Energy
+- Plans
+description: >-
+  EV Connect sells its charge-station management platform and API Platform
+  through a sales-led, quote-based motion rather than self-service public
+  pricing. The API Platform is marketed as being accessible via an API Gateway
+  with "documentation and service plans," but the specific service-plan tiers,
+  quotas, and prices are not published and require contacting EV Connect /
+  Schneider Electric sales. No pricing figures are reconciled in this artifact.
+notes: >-
+  Pricing is not publicly listed. EV Connect is part of Schneider Electric;
+  commercial terms for the platform and API access are negotiated per customer.
+  Reconcile service-plan tiers and prices from a partner agreement or quote.
+sources:
+- https://www.evconnect.com/platform/
+- https://www.evconnect.com/quote/
+- https://www.se.com/us/en/
+plans:
+- id: ev-connect-quote
+  name: Quote-Based Platform Agreement
+  type: enterprise
+  description: >-
+    Sales-led commercial agreement for the EV Connect charge point management
+    platform and API Platform access. Terms, service plans, and pricing are
+    negotiated per customer and are not publicly listed.
+  entries:
+  - label: Platform & API Access
+    name: platform_api_access
+    type: flat
+    metric: contract
+    limit: -1
+    timeFrame: year
+    geo: global
+    unit: 1
+    price: contact sales
+    userMultiplied: false
+  elements:
+  - name: Charge Point Management Platform
+  - name: API Platform / API Gateway
+  - name: OCPP Station Certification
+  - name: OCPI Roaming
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

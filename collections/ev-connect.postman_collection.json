@@ -1,0 +1,8 @@
+{
+  "info": {
+    "name": "EV Connect API Platform",
+    "description": "Structural Postman collection shell for the EV Connect API Platform. EV Connect (part of Schneider Electric) gates its API reference behind a partner/sales relationship and API Gateway; no public base URL, endpoints, or authentication details are documented. No requests are included to avoid fabrication. Populate on reconciliation with partner documentation.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": []
+}

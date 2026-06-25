@@ -1,0 +1,84 @@
+aid: ev-connect
+name: EV Connect
+review:
+  question: Does EV Connect publish a documented, publicly accessible API reference?
+  answer: false
+  date: '2026-06-21'
+  reviewer: API Evangelist
+  ownershipNote: |
+    EV Connect was acquired by Schneider Electric and operates as part of the
+    Schneider Electric portfolio. Commercial and developer terms for the EV
+    Connect platform are associated with Schneider Electric.
+findings:
+  summary: |
+    EV Connect operates a real charge point management platform (CPMS) with an
+    "API Platform" that it markets as accessible through an API Gateway, with
+    documentation and service plans, an API sandbox, and a virtual station
+    simulator. The platform spans stations / charge points, charging sessions,
+    connectors, drivers, pricing / plans, and event-driven integrations,
+    alongside OCPP station certification and OCPI roaming.
+
+    However, EV Connect does NOT publish a public API reference. There is no
+    publicly documented base URL, no enumerated endpoint paths, no
+    request/response schemas, and no public authentication detail. Access to
+    the developer portal, API Gateway, and credentials is gated behind a
+    partner/sales relationship (the site routes developers to "Let's talk" /
+    "Get a quote"). Schneider Electric also operates broader developer portals,
+    but no public EV Connect-branded API reference was found.
+
+    Because the contract is not public, the OpenAPI document declares no
+    servers and an empty paths object, and the Postman / Open Collection are
+    structural shells with no fabricated requests. Plans, rate limits, and
+    FinOps artifacts are marked reconciled:false.
+  ownership:
+    parent: Schneider Electric
+    note: EV Connect is part of Schneider Electric following acquisition.
+  apiAvailability:
+    publicReference: false
+    apiGateway: true
+    sandbox: true
+    virtualStationSimulator: true
+    servicePlans: true
+    documentedBaseURL: false
+    documentedEndpoints: false
+    documentedAuth: false
+    access: Partner / sales-gated via the EV Connect API Gateway developer portal.
+  capabilitiesMarketed:
+    - Stations / Charge Points (EVSE) management
+    - Charging Sessions / transactions
+    - Connectors and availability/status
+    - Drivers, custom driver apps, coupons, loyalty
+    - Pricing / plans and payments
+    - Event-driven integrations (webhook-style notifications)
+    - OCPP station certification
+    - OCPI roaming
+  standards:
+    - OCPP
+    - OCPI
+    - OpenADR
+sources:
+  - url: https://www.evconnect.com/platform/
+    type: Documentation
+    note: Describes the API Platform, API Gateway, open standards-based APIs, and prebuilt integrations; no endpoints or base URL published.
+  - url: https://www.evconnect.ca/api-platform
+    type: Documentation
+    note: Canadian API Platform page; references API Gateway with documentation and service plans, sandbox, and virtual station simulator; no public endpoints.
+  - url: https://github.com/evconnect
+    type: GitHubOrganization
+    note: Domain-verified EV Connect GitHub org; only SAFE-eV transparency forks are public, no API client/spec repos.
+  - url: https://www.se.com/us/en/
+    type: Website
+    note: Schneider Electric, EV Connect's parent company.
+actions:
+  apisYmlCreated: true
+  openapiPathsEmpty: true
+  reconciledFalseWhereUnknown: true
+  reason: |
+    EV Connect's API is real but its reference is partner/sales-gated. No
+    public base URL, endpoints, or auth are documented, so no endpoints were
+    fabricated: the OpenAPI declares empty servers/paths, collections are
+    structural shells, and plans/rate-limits/finops are reconciled:false
+    pending partner documentation.
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

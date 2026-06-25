@@ -1,0 +1,84 @@
+specification: FinOps Framework
+specificationVersion: '1.0'
+schema: https://www.finops.org/framework/
+provider: EV Connect
+providerId: ev-connect
+created: '2026-06-21'
+modified: '2026-06-21'
+reconciled: false
+tags:
+- EV Charging
+- Charge Point Management
+- CPMS
+- Mobility
+- Energy
+- FinOps
+- Cost Management
+- FOCUS
+description: >-
+  FinOps view of EV Connect platform and API spend. EV Connect (part of
+  Schneider Electric) sells its charge point management platform and API
+  Platform through quote-based, sales-led agreements rather than usage-based
+  public pricing. Because service-plan tiers, metered units, and prices are not
+  published, the billing model and meters below are unreconciled placeholders
+  to be confirmed from a partner agreement.
+notes: >-
+  No public pricing or usage-metering details are available. Reconcile billing
+  model, charge categories, and any per-API-call or per-station/per-session
+  metering from the EV Connect / Schneider Electric commercial agreement.
+sources:
+- https://www.evconnect.com/platform/
+- https://www.evconnect.com/quote/
+- https://focus.finops.org/focus-specification/v1-3/
+alignedWith:
+  framework: FinOps Foundation Framework
+  frameworkUrl: https://www.finops.org/framework/
+  dataSpec: FOCUS
+  dataSpecVersion: '1.3'
+  dataSpecUrl: https://focus.finops.org/focus-specification/v1-3/
+publisherName: EV Connect
+serviceCategory: EV Charging and Energy Management
+billingModel:
+  pricingCategory: Quote-Based
+  billingFrequency: see provider documentation
+  billingCurrency: USD
+  chargeCategories:
+  - Purchase
+focusColumns:
+  ServiceName: EV Connect API Platform
+  ServiceCategory: EV Charging and Energy Management
+  ProviderName: EV Connect
+  PublisherName: EV Connect
+  InvoiceIssuerName: Schneider Electric
+  BillingCurrency: USD
+  ChargeCategory: Purchase
+  PricingCategory: Quote-Based
+meters:
+- name: platform_agreement
+  description: >-
+    Negotiated platform / API Platform agreement. Specific metered units (per
+    station, per session, per API call) are not publicly documented.
+  unit: contract
+  aggregation: sum
+  dimensions:
+  - account
+principles:
+- name: Visibility
+  description: >-
+    Request usage and billing detail directly from EV Connect / Schneider
+    Electric; no self-service usage export is publicly documented.
+- name: Allocation
+  description: >-
+    Map platform charges to charging sites, networks, or business units per the
+    negotiated agreement.
+- name: Optimization
+  description: >-
+    Negotiate service-plan tiers and volume terms with sales; align API Gateway
+    plan to actual station/session volume.
+- name: Accountability
+  description: >-
+    Assign an owner for the EV Connect agreement and review platform spend
+    against the negotiated contract.
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
