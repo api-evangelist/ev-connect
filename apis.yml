@@ -146,6 +146,10 @@ apis:
     stop, and station status). EV Connect markets event-driven integrations, but no
     public webhook event catalog or payloads are documented; access is partner/sales-gated.
 common:
+- type: VulnerabilityDisclosure
+  url: security/ev-connect-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/ev-connect-domain-security.yml
 - type: GitHubOrganization
   url: https://github.com/evconnect
 - type: LinkedIn
@@ -160,6 +164,8 @@ common:
   url: rate-limits/ev-connect-rate-limits.yml
 - type: FinOps
   url: finops/ev-connect-finops.yml
+- url: https://www.evconnect.com/blog/
+  type: Blog
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
