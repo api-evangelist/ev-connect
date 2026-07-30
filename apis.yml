@@ -9,7 +9,19 @@ description: EV Connect is an EV charging network and charge-station management 
   energy systems, backed by OCPP station certification and OCPI roaming. Developer
   documentation and credentials are partner/sales-gated; no public base URL, endpoints,
   or authentication details are published.
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: enterprise
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Enterprise
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/ev-connect.png
 tags:
 - EV Charging
 - Charge Point Management
