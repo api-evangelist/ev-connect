@@ -1,0 +1,14 @@
+{
+  "provider": "ev-connect",
+  "sources": [
+    "ev-connect-openapi.yml"
+  ],
+  "outputs": [],
+  "archived": [
+    "archived ev-connect-openapi.yml"
+  ],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
