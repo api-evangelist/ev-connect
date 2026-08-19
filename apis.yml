@@ -32,7 +32,7 @@ tags:
 - OCPI
 created: '2026-06-21'
 modified: '2026-06-21'
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 apis:
 - aid: ev-connect:stations-charge-points
   name: EV Connect Stations / Charge Points API
