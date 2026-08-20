@@ -60,6 +60,10 @@ apis:
   tags:
   - Sessions
   - Charging
+  - Transaction
+  tags_raw:
+  - Sessions
+  - Charging
   - Transactions
   image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
   humanURL: https://www.evconnect.com/platform/
@@ -99,6 +103,10 @@ apis:
 - aid: ev-connect:drivers
   name: EV Connect Drivers API
   tags:
+  - Drivers
+  - Account
+  - Loyalty
+  tags_raw:
   - Drivers
   - Accounts
   - Loyalty
@@ -140,6 +148,10 @@ apis:
 - aid: ev-connect:webhooks
   name: EV Connect Webhooks
   tags:
+  - Webhook
+  - Event
+  - Notification
+  tags_raw:
   - Webhooks
   - Events
   - Notifications
