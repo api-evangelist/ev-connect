@@ -29,3 +29,26 @@
     detected: '2026-10-13'
   status: not-a-workflow
   arazzo: null
+- slug: ev-connect-openchargemap
+  label: openchargemap
+  partner: openchargemap
+  partner_name: openchargemap
+  type: claimed
+  channel: partner-built
+  evidence: https://openchargemap.org/site/poi?operatorid=3372
+  source: edge
+  relationship: endpoint-coverage
+  status: not-a-workflow
+  arazzo: null
+- slug: ev-connect-geotab-own
+  label: Geotab (own)
+  partner: geotab
+  partner_name: Geotab (own)
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://marketplace.geotab.com/partner/ev-connect-inc/
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
