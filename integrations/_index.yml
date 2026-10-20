@@ -52,3 +52,38 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
+- slug: ev-connect-open-charge-alliance-ocpp-certification
+  label: Open Charge Alliance (OCPP certification)
+  partner_name: Open Charge Alliance (OCPP certification)
+  category: OCPP certified charging products
+  type: register
+  channel: standard-directory
+  evidence: https://openchargealliance.org/participants/ev-connect-inc/
+  source: edge
+  relationship: standard-participant
+  contract_reference:
+    register: Open Charge Alliance certified products (openchargealliance.org/certified-companies/)
+    standard: OCPP (Open Charge Point Protocol)
+    spec_file: null
+    role: ocpp-certified-vendor
+    registered_name: EV Connect
+    register_id: OCA.0201.0055.CSMS
+    register_country: USA
+    matched_domain: evconnect.com
+    matched_by: domain
+    certified_products:
+    - product: OCPP certified Charging Station Management System
+      product_type: Charging Station Management System
+      ocpp_versions:
+      - OCPP 2.0.1
+      lapsed: false
+    certificates_active: 1
+    signal_note: certified_products = one entry per OCPP product type, never per certificate, model or version;
+      lapsed only when every certificate of the product type is on the OCA withdrawn list (the register does not
+      lapse a certificate when its OCPP version is superseded). Certificate counts are context, never counted
+    detected_by: sweep-ev-charging.py
+    detected: '2026-10-20'
+    identity: wikidata Q126652985 'EV Connect' P856 https://www.evconnect.com/
+    identity_source: wikidata P856 (labelled provenance step; Kin 2026-10-15 decision 1)
+  status: not-a-workflow
+  arazzo: null
